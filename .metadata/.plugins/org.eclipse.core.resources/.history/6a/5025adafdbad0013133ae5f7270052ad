@@ -1,0 +1,22 @@
+package com.me.mygdxgame;
+
+public class MELISSA {
+
+	
+static void funcion1()
+{
+System.out.println("funcion 1");
+}
+static void funcion2()
+{
+	funcion1();
+}
+public static void main(String[] args) {
+{
+funcion1();
+funcion2();
+}
+}
+}
+
+

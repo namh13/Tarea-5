@@ -1,0 +1,24 @@
+package com.me.mygdxgame;
+
+public class MELISSA {
+
+	
+static void funcionRecursiva(int num) 
+{
+	System.out.print(num);
+		if(num>10)
+		{
+			return;
+		}
+
+		num++;
+		funcionRecursiva(num);
+	}
+	public static void main(String[] args) {
+	{
+	funcionRecursiva(2);
+}
+}
+}
+
+
