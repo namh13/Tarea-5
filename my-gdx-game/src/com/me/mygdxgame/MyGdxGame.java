@@ -74,7 +74,11 @@ public class MyGdxGame implements ApplicationListener {
 		i=new Image(texture);
 		s.addActor(i);
 		
+		Fin adios = new Fin();
+		s.addActor(adios);
+		
 		Gdx.input.setInputProcessor(s);
+		
 		
 		
 		for(int i=0; i<=10; i++)
@@ -92,8 +96,14 @@ public class MyGdxGame implements ApplicationListener {
 			s.addActor(t);
 			pelotitasm.add(t);
 		}
+
+		
+		
+		Inicio hola = new Inicio();
+		s.addActor(hola);
 		
 	}
+	
 
 	@Override
 	public void dispose() {
@@ -120,6 +130,7 @@ public class MyGdxGame implements ApplicationListener {
 
 	@Override
 	public void resize(int width, int height) {
+	
 	}
 
 	@Override
