@@ -10,18 +10,11 @@ public class pausa extends InputListener {
 		stop = p;
 	}
 
-static boolean pausar = false;
+
 
 	public boolean touchDown(InputEvent event, float x, float y, int pointer, int button)	{
-	    if(pausa.pausar==true){
-	    	pausa.pausar=false;
-	    }
-	    else
-	    {
-	    	pausa.pausar=true;
-	    	System.out.println("Pausa Presionada");
-	    }
-		
+	    Pausa.pausar= !Pausa.pausar;
+	    System.out.println("Juego Pausado");
 		return true;		
 		}
 }

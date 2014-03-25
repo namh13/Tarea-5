@@ -117,19 +117,17 @@ public class MyGdxGame implements ApplicationListener {
 	@Override
 	public void render() {	
 		sprite.setRotation(rotacion);
-		if(pausa.pausar==true)
-		{
-		imagen.avanzar();
-		}
+		
+		//imagen.avanzar();
+		
 		Gdx.gl.glClearColor(4.5f, 8.3f, 2.2f, 8.2f);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		
 		batch.setProjectionMatrix(camera.combined);
+		if(!Pausa.pausar)
+		{
 		s.act();
-		//if(frame%100==0)
-		//s.addActor(new Pelotita(0,0));
-		//frame++;
-		s.draw();
+		s.draw();}
 		
 	}
 
