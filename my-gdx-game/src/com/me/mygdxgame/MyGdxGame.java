@@ -74,13 +74,14 @@ public class MyGdxGame implements ApplicationListener {
 		i=new Image(texture);
 		s.addActor(i);
 		
-		Fin adios = new Fin();
-		s.addActor(adios);
+		
 		
 		Gdx.input.setInputProcessor(s);
 		
+		Pausa pausar = new Pausa();
+		s.addActor(pausar);
 		
-		
+	
 		for(int i=0; i<=10; i++)
 		{
 			
@@ -88,16 +89,18 @@ public class MyGdxGame implements ApplicationListener {
 			s.addActor(p);
 			pelotitas.add(p);
 		}
-		
+		Fin adios = new Fin();
 
 		for(int e=0; e<5; e++)
 		{
-			PelotitaMala t = new PelotitaMala((int)(Math.random()*1000%w),(int)(Math.random()*1000%h));
+			PelotitaMala t = new PelotitaMala((int)(Math.random()*1000%w),(int)(Math.random()*1000%h),adios);
 			s.addActor(t);
 			pelotitasm.add(t);
 		}
 
 		
+		adios.setVisible(false);
+		s.addActor(adios);
 		
 		Inicio hola = new Inicio();
 		s.addActor(hola);
@@ -114,8 +117,10 @@ public class MyGdxGame implements ApplicationListener {
 	@Override
 	public void render() {	
 		sprite.setRotation(rotacion);
+		if(pausa.pausar==true)
+		{
 		imagen.avanzar();
-		
+		}
 		Gdx.gl.glClearColor(4.5f, 8.3f, 2.2f, 8.2f);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		

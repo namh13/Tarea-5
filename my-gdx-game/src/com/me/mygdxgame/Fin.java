@@ -7,6 +7,6 @@ public class Fin extends Image{
 
 	public Fin() {
 		 super(new Texture("data/bye.png"));
-		 this.addListener(new MiInputMala(this));
+		 //this.addListener(new MiInputMala(this));
 		 }
 }

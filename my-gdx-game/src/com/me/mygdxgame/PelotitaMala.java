@@ -4,9 +4,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class PelotitaMala extends Image{
-	public PelotitaMala(int x, int y) {
+	public PelotitaMala(int x, int y, Fin adios) {
 		super(new Texture("data/pelotitamala.png"));
-		addListener(new MiInputMala(this));
+		addListener(new MiInputMala(this,adios));
 		this.setX(x);
 		this.setY(y);
 	}
